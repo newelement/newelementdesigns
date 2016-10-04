@@ -1,0 +1,23 @@
+{
+  "name": "New Element Designs",
+  "authors": [
+    "Don Jones <djones@newelementdesigns.com>"
+  ],
+  "description": "",
+  "main": "index.php",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "^4.2.0"
+  }
+}

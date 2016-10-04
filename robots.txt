@@ -1,0 +1,37 @@
+
+
+User-agent: *
+Disallow: /images/
+Disallow: /stats/
+Disallow: /admin/
+
+
+User-agent: grub-client
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CherryPicker
+Disallow: /
+
+User-agent: NICErsPRO
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: CherryPickerSE/1.0
+Disallow: /
+
+User-agent: CherryPickerElite/1.0
+Disallow: /

@@ -1,0 +1,305 @@
+@import 'normalize';
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    color: $white;
+    background-color: $brand-color;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+a{
+    display: inline-block;
+    background-color: rgba(255,255,255, 0.2);
+    color: $white;
+    transition: all .25s ease;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0 2px;
+
+    &:hover{
+        color: $defaut-hover;
+        background-color: rgba(255,255,255, 0.0);
+    }
+}
+
+p{
+    margin: 0 0 1.5em 0;
+    padding: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.header,
+.intro,
+.bio,
+.contact,
+.footer {
+    max-width: $max-width;
+}
+
+.header{
+    margin: 3em auto;
+    text-align: center;
+
+    svg{
+        max-width: 370px;
+    }
+}
+
+.logo-color{
+    fill: $white;
+}
+
+.intro{
+    margin: 0 auto 3em auto;
+
+    h2{
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.about-mini{
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0;
+    font-size: 1rem;
+    margin: 0 0 1.5em 0;
+    font-weight: 200;
+}
+
+.slogan{
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 0 0 1.5em 0;
+}
+
+.portfolio-items{
+    margin-bottom: 2.5em;
+    overflow: hidden;
+
+    ul{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display: block;
+            min-height: 280px;
+            max-height: 320px;
+            position: relative;
+            width: 50%;
+            float: left;
+            overflow: hidden;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            transition: background-position 1s ease;
+
+            &.deltaploy{
+                background-image: url('images/deltaploy.png');
+            }
+
+            &.csx{
+                background-image: url('images/csx.png');
+            }
+
+            &.youfit{
+                background-image: url('images/youfit.png');
+            }
+
+            &.wfu-magazine{
+                background-image: url('images/magazine.png');
+            }
+
+            &.maninis{
+                background-image: url('images/maninis.png');
+            }
+
+            &.phonetree{
+                background-image: url('images/phonetree.png');
+            }
+        }
+
+        li:hover,
+        li:focus{
+            .desc-overlay{
+                transform: translateY(0);
+            }
+            transition: background-position 10s ease;
+            transition-delay: .35s;
+            background-position: bottom center;
+        }
+    }
+}
+
+.desc-overlay{
+    padding: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay;
+    transition: all .45s ease;
+    transform: translateY(100%);
+    letter-spacing: 1px;
+
+    h3{
+        font-size: 1.5rem;
+        margin: 0 0 1.5em 0;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    p:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.bio{
+    margin: 0 auto 2.5em auto;
+    letter-spacing: 1px;
+
+    h2{
+        font-size: 2rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin: 0 0 1.5em 0;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 1.35rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin: 0 0 1.5em 0;
+        padding-top: 12px;
+        text-align: center;
+    }
+}
+
+.contact{
+    margin: 0 auto 0 auto;
+    letter-spacing: 1px;
+
+    h2{
+        font-size: 2rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin: 0 0 1.5em 0;
+        text-align: center;
+    }
+
+}
+
+form{
+    margin:0;
+    padding: 0;
+
+    .form-row{
+        margin-bottom: 1.5em;
+    }
+
+    label{
+        display: block;
+        margin-bottom: .75em;
+    }
+
+    input{
+        display: block;
+        border: 3px solid $white;
+        height: 36px;
+    }
+
+    textarea{
+        display: block;
+        border: 3px solid $white;
+        height: 100px;
+    }
+
+    input,
+    textarea{
+        transition: all .25s ease;
+        width: 100%;
+        outline: none;
+        padding: 4px 10px;
+        letter-spacing: 1px;
+
+        &:focus{
+            border-color: lighten($button-color, 30%);
+        }
+    }
+
+    button{
+        display: block;
+        width: 100%;
+        color: darken( $button-color, 40% );
+        background-color: $button-color;
+        transition: all .25s ease;
+        border: 0;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: 12px 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: lighten( $button-color, 15% );
+        }
+    }
+}
+
+.submit-message{
+    text-align: center;
+    color: lighten( $button-color, 15% );
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.footer{
+    font-size: .75rem;
+    letter-spacing: 1px;
+    padding: 48px 0;
+    margin: 0 auto;
+}
+
+.copyright{
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
+.footer-links{
+    display: inline-block;
+}
+
+@media screen and (max-width: 37.5em){
+    body{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .portfolio-items ul li{
+        width: 100%;
+    }
+
+}
