@@ -94,6 +94,10 @@ p{
     margin-bottom: 2.5em;
     overflow: hidden;
 
+    &:hover li{
+        opacity: 0.4;
+    }
+
     ul{
         display: block;
         width: 100%;
@@ -112,7 +116,8 @@ p{
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
-            transition: background-position 1s ease;
+            transition: all 1s ease;
+            opacity: 1;
 
             &.deltaploy{
                 background-image: url('images/deltaploy.png');
@@ -137,6 +142,7 @@ p{
             &.phonetree{
                 background-image: url('images/phonetree.png');
             }
+
         }
 
         li:hover,
@@ -148,6 +154,16 @@ p{
             transition-delay: .35s;
             background-position: bottom center;
         }
+
+        li:hover{
+            opacity: 1;
+        }
+
+        li:hover ~ li{
+            opacity: 0.4;
+        }
+
+
     }
 }
 
